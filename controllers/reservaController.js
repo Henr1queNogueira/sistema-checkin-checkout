@@ -5,7 +5,7 @@ router.get("/reservas", (req, res)=> {
     res.render('reserva');
 });
 
-/*Rota para receber os dados do formulário*/
+//Rota para receber os dados do formulário
 router.post('/salvarReservas', (req, res)=> {
 
     res.send('Solicitação enviada!');
