@@ -1,0 +1,34 @@
+<%- include('../../partials/header.ejs'); %>
+  <body>
+    <%- include('../../partials/navbar.ejs'); %> 
+      <div class="container">
+        <br>
+          <div class="py-3" id="div-reservas">
+              <h2 class="display-5 text-white text-center">Edição de Usuário</h2>
+          </div>
+          <div class="container py-4 shadow-lg p-3 mb-5 bg-white">
+            <form class="form-row" method="POST" action="/admin/usuarios/atualizar">
+                <input type="hidden" name="id" value="<%= usuario.id %>">
+              <div class="form-group col-md-4">
+                  <label>Nome</label>
+                  <input type="text" class="form-control" name="nomeUsuario" placeholder="Digite o nome completo" 
+                  value="<%= usuario.nome %>">
+              </div>
+              <div class="form-group col-md-4">
+                  <label>E-mail</label>
+                  <input type="email" class="form-control" name="emailUsuario" placeholder="Digite o e-mail"  
+                  value="<%= usuario.email %>">
+              </div>
+              <div class="form-group col-md-4">
+                <label>Data de Nascimento</label>
+                <input type="text" class="form-control" name="dataNascimentoUsuario"  value="<%_ usuario.dataNascimento %>">
+              </div>
+              <div class="form-group col-md-12" id="btn-reservar">
+                <a href="/admin/usuarios" class="btn btn-primary">Voltar</a>  
+                <button type="submit" class="btn btn-success">Atualizar</button>  
+              </div>
+            </form>
+          </div>
+      </div>
+  </body>
+<%- include('../../partials/footer.ejs'); %>

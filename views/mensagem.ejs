@@ -1,0 +1,27 @@
+<%- include('./partials/header.ejs'); %>
+<body>
+  <%- include('./partials/navbar.ejs'); %>
+    <div class="container">
+      <br>
+      <h1 class="text-center">Fale Conosco: Mensagens</h1>
+        <% mensagens.forEach(mensagem => { %>
+          <br>
+          <div class="card">
+              <div class="card-header">
+                Nome: <%= mensagem.nome%>
+                <br>
+              </div>
+              <div class="card-header">
+                E-mail: <%= mensagem.email%>
+                <br>
+              </div>
+                <div class="card-body">
+                 <p class="card-text"> <%= mensagem.mensagem%> </p>
+                 <br>
+                 <a href="#" class="btn btn-primary">Responder</a>
+                </div>              
+          </div>   
+        <% }) %>       
+    </div>
+</body>
+<%- include('./partials/footer.ejs'); %>

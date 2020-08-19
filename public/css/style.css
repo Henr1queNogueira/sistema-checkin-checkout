@@ -1,0 +1,92 @@
+body {
+  padding-top: 75px;
+  background-color: #eceff1;
+
+}
+p {
+	text-align: justify;
+	text-justify: inter-word;
+
+}
+
+@media (max-width: 767px) {
+ .display-4{
+    font-size: 2.5rem;
+  }
+  body {
+    padding-top: 0px;
+  }
+  .fixed-top {
+    position: relative;
+  }
+}
+
+.lista-plano li + li {
+  border-top: 1px solid rgba(0,0,0,.2);
+}
+
+.lista-plano li {
+  padding: 1rem;
+}
+
+
+/* Intro */
+
+.intro {
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('../img/principal.png') no-repeat center center;
+	background-size: cover;
+	line-height: 1.5;
+	padding: 120px 0;
+	text-align: center;
+	color: #fff;
+	
+}
+
+.intro h1 {
+	text-transform: uppercase;
+	font-size: 3em;
+	border-radius: 1%;
+	color: paleturquoise;
+}
+
+.intro h1::after {
+	content: '';
+	display: block;
+	width: 20px;
+	height: 4px;
+	background: #fff;
+	margin: 10px auto;
+}
+
+.intro p {
+	font-style: italic;
+	font-size: 1.125em;
+}
+
+@media (max-width: 739px) {
+	.intro {
+		padding: 60px 0;
+	}
+}
+
+.img-quartos{
+	width: 400px;
+	height: 300px 
+}
+
+#logo{
+    width: auto;
+	height: auto;
+	padding: 20px;
+}
+#btnDisponibilidade{
+	margin-left: 10px;
+	
+}
+#btn-reservar{
+	text-align: right;
+}
+#div-reservas{
+	background-color: #138496;
+}
+

@@ -1,0 +1,54 @@
+<%- include('./partials/header.ejs'); %>
+<body>
+  <%- include('./partials/navbar.ejs'); %>
+
+  <!--Exbir somente na home-->
+  <main class="intro">
+    <h1>Casa de Apoio<br>Hospital de amor da amazônia</h1>
+    <h5>Porto Velho - Rondônia - Brasil</h5>
+    <br>
+    <a class="btn btn-outline-info" href="#">Saiba mais</a>
+  </main>
+  
+  <!--Verificar reservas-->
+  <div class="container py-4 bg-light shadow">
+    <form class="form-row align-items-center">
+      <div class="form-group col-md-3">
+        <label>Data de entrada</label>
+        <input type="date" class="form-control" id="dtEntrada">
+      </div>
+      <div class="form-group col-md-3">
+        <label>Data de saída</label>
+        <input type="date" class="form-control" id="dtSaida">
+      </div>
+      <div class="form-group col-md-3">
+        <label>Tipo de Quarto?</label>
+        <select class="form-control" id="selectQuarto">
+          <option disabled='disabled' selected>Selecione</option>
+          <option value="">Adulto</option>
+          <option value="">Infantil</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <br>
+        <button id='btnDisponibilidade' type="button" class="btn btn-danger mb-2">Verificar Disponibilidade</button>
+      </div>
+    </form> 
+  </div>
+  <br>
+<div class="container py-4 bg-light">
+  <div class="row">
+      <div class="col-md-4">
+          <img id="logo" class="img-responsive img-circle center-block" alt="Casa de apoio" width="300" height="300" src="/img/logos/logo-azul-claro.png" alt="logo da casa de apoio">
+      </div>
+      <div class="col-md-8">
+          <h2 class="section-header">Conheça nosso projeto</h2>
+          <hr>
+          <br>
+          <p>A Casa de Apoio Filhos de Hiram é uma entidade sem fins lucrativos, que por meio de doações e recursos, será construída ao lado do Hospital de Câncer da Amazônia, e oferecerá hospedagem aos pacientes de outros municípios ou estados, que virão em tratamento para esta unidade de saúde. E disponibilizará um ambiente de repouso com muito conforto e de forma gratuita àqueles que lutam contra o Câncer.</p>    
+      </div>                  
+    </div>
+  </div>
+  <%- include('./partials/perguntas.ejs'); %>
+</body>
+<%- include('./partials/footer.ejs'); %>

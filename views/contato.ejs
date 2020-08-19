@@ -1,0 +1,93 @@
+<%- include('./partials/header.ejs'); %>
+<body>
+  <%- include('./partials/navbar.ejs'); %>
+  <section class="container">
+    <div class="my-5 text-center">
+      <span class="h6 d-block">POSSUI ALGUMA DÚVIDA?</span>
+      <h1 class="display-4 text-info">Fale Conosco</h1>
+    </div>
+    <div class="row">
+      <div class="col-lg mb-5">
+        <form class="bg-light rounded p-4 box-shadow" method="POST" action="/salvarMsgContato">
+          <div class="form-group">
+            <label>Nome</label>
+            <input type="text" class="form-control" name="nome" required>
+          </div>
+          <div class="form-group">
+            <label for="clienteEmail">E-mail</label>
+            <input type="email" class="form-control" name="email">
+          </div>
+          <div class="form-group">
+            <label for="clienteMensagem">Mensagem</label>
+            <textarea type="text" class="form-control" rows="4" name="mensagem"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+        </form>
+      </div>
+      <div class="col-lg">
+        <h2 class="h6">NOSSO ENDEREÇO</h2>
+        <a href="#"><img class="img-fluid box-shadow rounded mb-4" src="img/mapa.png" alt="Endereço da Empresa"></a>
+        
+        <h2 class="h6">DADOS DE CONTATO</h2>
+        <ul class="list-unstyled text-secondary">
+          <li>casadeapoio@glomaron.org.br</li>
+          <li>69 3223-1172</li>
+          <li>De Seg. à Sex. das 8h às 18h</li>
+        </ul>
+        
+        <h2 class="h6">REDES SOCIAIS</h2>
+        <ul class="list-unstyled" style="max-width: 260px">
+          <li><a class="btn btn-outline-secondary btn-sm btn-block mb-2" href="#" >Facebook</a></li>
+          <li><a class="btn btn-outline-secondary btn-sm btn-block mb-2" href="#">WhatsApp</a></li>
+          <li><a class="btn btn-outline-secondary btn-sm btn-block mb-2" href="https://www.youtube.com/watch?v=o5FogzEqF5U">Youtube</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="container bg-light">
+    <div class="my-5 text-center">
+        <br>
+        <h1 class="text-dark">Perguntas Frequentes <hr></h1>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-6" id="perguntasFrequentes" data-children=".pergunta">
+            <div class="pergunta py-2">
+                <a class="lead" data-toggle="collapse" data-parent="#perguntasFrequentes" href="#pergunta1" aria-expanded="true" aria-controls="pergunta1">→ Quem é o grupo/instituição responsável pelo projeto?</a>
+                <div id="pergunta1" class="collapse" role="tabpanel">
+                    <p>Francimar Dias Rodrigues (Presidente), Aldino Brasil de Souza (Presidente do Conselho) e Angelo ALmério de Melo Baleeiro (Secretário).</p>
+                </div>
+            </div>
+            <div class="dropdown-divider"></div>
+            <div class="pergunta py-2">
+                <a class="lead" data-toggle="collapse" data-parent="#perguntasFrequentes" href="#pergunta2" aria-expanded="true" aria-controls="pergunta2">→ Qual é o principal objetivo?</a>
+                <div id="pergunta2" class="collapse" role="tabpanel">
+                    <p>O projeto visa construir uma casa de apoio que atenderá pacientes e familiares oriundos de outros municípios e Estados, que estarão em tratamento no Hospital de Câncer da Amazônia.</p>
+                </div>
+            </div>
+            <div class="dropdown-divider"></div>
+            <div class="pergunta py-2">
+                <a class="lead" data-toggle="collapse" data-parent="#perguntasFrequentes" href="#pergunta3" aria-expanded="true" aria-controls="pergunta3">→ Quem é o públivo-alvo?</a>
+                <div id="pergunta3" class="collapse" role="tabpanel">
+                    <p>Pacientes e seus acompanhantes que estão fazendo tratamento no Hospital do Câncer da Amazônia.</p>
+                </div>
+            </div>
+            <div class="dropdown-divider"></div>
+            <div class="pergunta py-2">
+                <a class="lead" data-toggle="collapse" data-parent="#perguntasFrequentes" href="#pergunta4" aria-expanded="true" aria-controls="pergunta4">→ Qual é o endereço?</a>
+                <div id="pergunta4" class="collapse" role="tabpanel">
+                    <p>Km 17, BR 364, próximo ao Hospital de Câncer da Amazônia.</p>
+                </div>
+            </div>
+            <div class="dropdown-divider"></div>
+            <div class="pergunta py-2">
+                <a class="lead" data-toggle="collapse" data-parent="#perguntasFrequentes" href="#pergunta5" aria-expanded="true" aria-controls="pergunta5">→ O paciente poderá escolher o quarto ou será lotado no quarto/leito de acordo com a disponibilidade?</a>
+                <div id="pergunta5" class="collapse" role="tabpanel">
+                    <p> De acordo com a disponibilidade, porém haverá exceções.</p>
+                </div>
+            </div>
+            <div class="dropdown-divider"></div>
+        </div>
+    </div>
+</section>
+</body>
+<%- include('./partials/footer.ejs'); %> 
