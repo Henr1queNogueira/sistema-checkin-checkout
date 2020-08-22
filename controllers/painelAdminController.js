@@ -4,7 +4,7 @@ const router = express.Router();
 
 
 router.get("/admin/", function(req, res){
-    res.render('admin/painelTeste');
+    res.render('admin/painelAdmin');
 });
 
 /*criar uma função que permita
