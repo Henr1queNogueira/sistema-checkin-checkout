@@ -7,7 +7,8 @@ const connection = require('./Database/database'); //Conexão com o banco
 const contatoController = require('./controllers/contatoController');
 const quartoController = require('./controllers/quartoController');
 const reservaController = require('./controllers/reservaController');
-const usuarioController = require('./controllers/usuarioController')
+const usuarioController = require('./controllers/usuarioController');
+const painelAdminController = require('./controllers/painelAdminController')
 
 app.set('view engine', 'ejs'); //Informando ao express que o EJS é View engine
 app.use(express.static('public'));//informando a aplicação que quero usar arquivos estáticos (css, js, img)
@@ -26,6 +27,7 @@ app.use('/', contatoController);
 app.use('/', quartoController);
 app.use('/', reservaController);
 app.use('/', usuarioController);
+app.use('/', painelAdminController)
 
 /*  ------ROTAS----- */
 app.get("/", (req, res) => {

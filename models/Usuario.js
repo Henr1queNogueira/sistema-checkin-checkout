@@ -1,5 +1,6 @@
 const Sequelize = require('sequelize');
 const connection = require('../Database/database');
+const moment = require('moment');
 
 //criando a tabela 
 const Usuario = connection.define('usuarios', {
@@ -16,10 +17,11 @@ const Usuario = connection.define('usuarios', {
     },
     dataNascimento:{
         type: Sequelize.DATE,
+        get: function() {return moment.utc(this.getDataValue('dataNascimento')).format('YYYY-MM-DD')},
         allowNull: false
-    }
-   
-});
+        }  
+
+    });
 module.exports = Usuario;
 
 /*passando a tabela para o banco 
