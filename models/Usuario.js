@@ -3,7 +3,7 @@ const connection = require('../Database/database');
 const moment = require('moment');
 
 //criando a tabela 
-const Usuario = connection.define('usuarios', {
+const Usuario = connection.define('usuario', {
     nome:{
         type: Sequelize.STRING,
         allowNull: false,
@@ -19,12 +19,17 @@ const Usuario = connection.define('usuarios', {
         type: Sequelize.DATE,
         get: function() {return moment.utc(this.getDataValue('dataNascimento')).format('YYYY-MM-DD')},
         allowNull: false
-        }  
+        },
+    senha:{
+        type: Sequelize.STRING,
+        allowNull: false,
+        notNull: true
+    }
+});
 
-    });
 module.exports = Usuario;
 
-/*passando a tabela para o banco 
-Usuario.sync({force: false}).then(() => {
+
+/*Usuario.sync({force: false}).then(() => {
     console.log("Tabela criada!")
-}); */
+});*/

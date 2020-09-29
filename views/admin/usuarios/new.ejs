@@ -1,24 +1,47 @@
 <%- include('../../partials/header.ejs'); %>
   <body>
     <%- include('../../partials/navbar.ejs'); %> 
-      <div class="container">
-        <br>
+      <div class="container mt-5">
+        <%- include('../../partials/mensagens.ejs'); %> 
           <div class="py-3" id="div-reservas">
               <h2 class="display-5 text-white text-center">Cadastro de Usuário</h2>
           </div>
           <div class="container py-4 shadow-lg p-3 mb-5 bg-white">
             <form class="form-row" method="POST" action="/usuarios/salvar">
+               <!--Exibir mensagem de erros c/ array-->
+               <div class="form-group col-md-12">
+                <% if(typeof erros != 'undefined'){ %>
+                  <% erros.forEach(function(error) { %>
+                      <div class="alert alert-danger">
+                          <%= error.msg %>
+                      </div>
+                  <% }); %>
+                <% } %>
+              </div>
               <div class="form-group col-md-4">
                   <label>Nome</label>
-                  <input type="text" class="form-control" name="nomeUsuario" placeholder="Digite o nome completo">
+                  <input type="text" class="form-control" name="nomeUsuario" id="nomeUsuario" placeholder="Digite o nome completo">
               </div>
               <div class="form-group col-md-4">
                   <label>E-mail</label>
-                  <input type="email" class="form-control" name="emailUsuario" placeholder="Digite o e-mail">
+                  <input type="email" class="form-control" name="emailUsuario" id="emailUsuario" placeholder="Digite o e-mail">
               </div>
               <div class="form-group col-md-4">
                 <label>Data de Nascimento</label>
-                <input type="date" class="form-control" name="dataNascimentoUsuario">
+                <input type="date" class="form-control" name="dataNascimentoUsuario" id="dataNascimentoUsuario">
+              </div>
+              <div class="form-group col-md-4">
+                <label>Senha</label>
+                <input type="password" class="form-control" name="senhaUsuario" id="senhaUsuario" placeholder="********">
+              </div>
+              <div class="form-group col-md-4">
+                <label>Repetir a sua senha</label>
+                <input type="password" class="form-control" name="senha2Usuario" id="senha2Usuario" placeholder="********">
+              </div>
+              <div class="form-group col-md-4">
+                <!--<label>Novo-campo</label>
+                <input type="password" class="form-control" name="senha2Usuario" placeholder="********" required>
+                -->
               </div>
               <div class="form-group col-md-12" id="btn-reservar">
                 <a href="/admin/usuarios" class="btn btn-primary">Voltar</a>  

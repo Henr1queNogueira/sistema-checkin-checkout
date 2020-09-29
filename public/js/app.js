@@ -10,8 +10,8 @@ function confirmDelete(event, form){
 
 };
 
-$('.datepicker').datepicker({
+/*$('.datepicker').datepicker({
     format: 'dd/mm/yyyy', 
     language: 'pt-BR'
     
-});
+});*/
