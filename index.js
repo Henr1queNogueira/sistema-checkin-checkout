@@ -8,6 +8,7 @@ const connection = require('./Database/database'); //Conexão com o banco
 
 /*importando as controllers */
 const contatoController = require('./controllers/contatoController');
+const quemSomosController = require('./controllers/quemSomosController')
 const quartoController = require('./controllers/quartoController');
 const reservaController = require('./controllers/reservaController');
 const usuarioController = require('./controllers/usuarioController');
@@ -49,7 +50,8 @@ app.use('/', contatoController);
 app.use('/', quartoController);
 app.use('/', reservaController);
 app.use('/', usuarioController);
-app.use('/', painelAdminController)
+app.use('/', painelAdminController);
+app.use('/', quemSomosController);
 
 /*  ------ROTAS----- */
 //Principal

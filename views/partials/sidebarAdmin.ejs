@@ -1,61 +1,17 @@
-      <!-- INÍCIO DO MENU-LATERAL-->
-      <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion">
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin">
-          <div class="sidebar-brand-icon">
-            <i class="fas fa-home"></i>
-          </div>
-          <br>
-          <div class="sidebar-brand-text">Casa - Filhos de Hiram </div>
-        </a>
-        <!-- Divider -->
-        <hr class="sidebar-divider my-0">
-        <!-- Nav Item - Painel ADMIN -->
-        <br>
-        <div class="sidebar-heading text-white">
-          <h6><i class="fas fa-fw fa-users"></i> Usuários</h6>
-        </div>
-        <li class="nav-item">
-          <a class="nav-link" href="/admin/usuarios">
-            <i class="fas fa-fw fa-list"></i>
-            <span>Lista de Usuários</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/admin/usuarios/new">
-            <i class="fas fa-fw fa-user-plus"></i>
-            <span>Adicionar Usuário</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-pencil-alt"></i>
-            <span>Editar Usuário</span></a>
-        </li>
-        <!-- Linha divisória- RESERVAS-->
-        <hr class="sidebar-divider">
-        <!-- Heading -->
-        <div class="sidebar-heading text-white">
-          <h6><i class="fas fa-fw fa-bed"></i>  Reservas</h6>
-        </div>   
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-list"></i>
-            <span>Lista de Reservas</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/reservas">
-            <i class="fas fa-fw fa-plus-circle"></i>
-            <span>Adicionar Reserva</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-pencil-alt"></i>
-            <span>Editar Reserva</span></a>
-        </li>
-        <!-- Divider -->
-        <hr class="sidebar-divider d-none d-md-block">
-        <!-- Botão para recolher ou contrair menu -->
-        <div class="text-center d-none d-md-inline">
-          <button class="rounded-circle border-0" id="sidebarToggle"></button>
-        </div>
-      </ul>
-      <!-- FINAL DO MENU-LATERAL -->
+<!-- INÍCIO DO MENU-LATERAL-->
+<div class="sidebar-container">
+  <div class="logo">
+    <h4 class="text-white font-weight-bold">
+      Casa - Filhos de Hiram
+    </h4>
+  </div>
+  <div class="menu">
+    <a href="/admin" class="d-block p-3 text-light"><ion-icon name="home-outline" class="mr-2 lead"></ion-icon>Principal</a>
+    <a href="#" class="d-block p-3 text-light"><ion-icon name="reader-outline" class="mr-2 lead"></ion-icon></ion-icon>Reservas</a>
+    <a href="#" class="d-block p-3 text-light"><ion-icon name="bed-outline" class="mr-2 lead"></ion-icon>Quartos</a>
+    <a href="/admin/usuarios" class="d-block p-3 text-light"><ion-icon name="people-outline" class="mr-2 lead"></ion-icon>Usuários</a>
+  </div>
+</div>
+     
+<!-- FINAL DO MENU-LATERAL -->
   

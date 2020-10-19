@@ -1,53 +1,54 @@
-<%- include('../../partials/header.ejs'); %>
-<body>
-    <%- include('../../partials/navbar.ejs'); %> 
-    <div class="container">
-        <hr>
-        <h2>Lista de Usuários</h2>
-        <a class="btn btn-primary" href="/admin/usuarios/new">Criar novo usuário</a>
-        <hr>
-        <table class="table table-striped table-bordered">
-            <thead class="thead-dark">
-                <th scope="col">Id</th>
-                <th scope="col">Nome</th>
-                <th scope="col">Ações</th>
-            </thead>
-            <tbody>
-                <% usuarios.forEach(usuarios => { %>
-                    <tr>
-                        <th scope="row"><%= usuarios.id %></th>
-                        <td><%= usuarios.nome %></td>
-                        <td>
-                            <a href="/admin/usuarios/editar/<%= usuarios.id %>" class="btn btn-warning">Editar</a>
-                            <form method="POST" action="/usuarios/delete" style="display: inline;" onsubmit="confirmDelete(event, this)">
-                                <input type="hidden" name="id" value="<%= usuarios.id %>">
-                                <button class="btn btn-danger">Excluir</button>
-                            </form>      
-                        </td>
-                    </tr>
-                <% }) %>
-            </tbody>
-        </table>
-        
-        <!--modal
-            <div class="container py-4 shadow-lg p-3 mb-5 bg-white">
-                <form class="form-row">
-                    <div class="form-group col-md-4">
-                        <label>Nome</label>
-                        <input type="text" class="form-control" name="nomeUsuario" placeholder="Digite o nome completo">
+<%- include('../../partials/headerAdmin.ejs'); %>
+  <body>
+    <div class="d-flex">
+      <%- include('../../partials/sidebarAdmin.ejs'); %>
+        <div class="w-100">
+          <%- include('../../partials/navbarAdmin.ejs'); %>
+          <div id="content">
+             <selection class="py-3">
+                <div class="container">
+                    <div class="py-4 row">
+                        <div class="col-lg-9">
+                            <h3 class="font-weight-bold">Lista de Usuários</h3>
+                        </div> 
+                        <div class="col-lg-3 d-flex justify-content-end">
+                            <a class="btn btn-primary" href="/admin/usuarios/new">Inserir usuário</a>
+                        </div>
+                        <hr>
                     </div>
-                    <div class="form-group col-md-4">
-                        <label>E-mail</label>
-                        <input type="email" class="form-control" name="emailUsuario" placeholder="Digite o e-mail">
+                    <div class="row">
+                      <div class="col-lg-12">
+                            <table class="table table-striped table-bordered">
+                                <thead class="thead-dark">
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">E-mail</th>
+                                    <th scope="col">Ações</th>
+                                </thead>
+                                <tbody>
+                                    <% usuarios.forEach(usuarios => { %>
+                                        <tr>
+                                            <th scope="row"><%= usuarios.id %></th>
+                                            <td><%= usuarios.nome %></td>
+                                            <td><%= usuarios.email %></td>
+                                            <td>
+                                                <a href="/admin/usuarios/editar/<%= usuarios.id %>" class="btn btn-warning">Editar</a>
+                                                <form method="POST" action="/usuarios/delete" style="display: inline;" onsubmit="confirmDelete(event, this)">
+                                                    <input type="hidden" name="id" value="<%= usuarios.id %>">
+                                                    <button class="btn btn-danger" data-toggle="modal" data-target="#delete">Excluir</button>
+                                                </form>      
+                                            </td>
+                                        </tr>
+                                    <% }) %>
+                                </tbody>
+                            </table>
+                      </div>      
                     </div>
-                    <div class="form-group col-md-4">
-                        <label>Data de Nascimento</label>
-                        <input type="date" class="form-control" name="dataNascimentoUsuario">
-                    </div>
-                    <button class="btn btn-success">Atualizar</button>
-                    <button class="btn btn-danger">Excluir</button>
-                </form>
-            </div>-->
+                </div>        
+             </selection>
+            
+          </div>
         </div>
-    </body>
-    <%- include('../../partials/footer.ejs'); %>
+    </div>
+  </body>
+  

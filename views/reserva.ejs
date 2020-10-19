@@ -1,140 +1,140 @@
 <%- include('./partials/header.ejs'); %>
-<body>
-    <%- include('./partials/navbar.ejs'); %>
-    <section class="container my-5">
-        <div class="py-4" id="div-reservas">
-            <h2 class="display-5 text-white text-center">SOLICITAÇÃO DE RESERVAS</h2>
-        </div>
-        <div class="container py-4 shadow-lg p-3 mb-5 bg-white">
-            <form method="POST" action="/salvarReservas">
-                <div class="form-group col-md-12">
-                    <h5 class="text-dark text-left">Dados do Paciente <hr></h5>
-                </div>   
-                <div class="form-row">
-                    <div class="form-group col-md-3">
-                        <label>Nome</label>
-                        <input type="text" class="form-control" id="nameID" aria-describedby="emailHelp" placeholder="">
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label>Data de Nascimento</label>
-                        <input type="date" class="form-control" id="cpfID" aria-describedby="emailHelp" placeholder="">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label>CPF</label>
-                        <input type="text" class="form-control" id="cpfID" aria-describedby="emailHelp" placeholder="">
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label>RG</label>
-                        <input type="text" class="form-control" id="cpfID" aria-describedby="emailHelp" placeholder="">
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label>Sexo</label>
-                        <select class="form-control" id="selectQuarto">
-                            <option disabled='disabled' selected>Selecione</option>
-                            <option>Masculino</option>
-                            <option>Feminino</option>
-                            <option>Não informar</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label>Endereço</label>
-                        <input type="text" class="form-control" id="nameID" aria-describedby="emailHelp" placeholder="">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label>E-mail</label>
-                        <input type="number" class="form-control" id="cpfID" aria-describedby="emailHelp" placeholder="">
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label>Telefone</label>
-                        <input type="number" class="form-control" id="cpfID" aria-describedby="emailHelp" placeholder="">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label>Laudo Médico</label>
-                        <input type="file" class="form-control-sm form-control-file" id="exampleFormControlFile1">
-                    </div>
+    <body>
+        <%- include('./partials/navbar.ejs'); %>
+            <section class="container my-5">
+                <div class="py-4" id="div-reservas">
+                    <h2 class="display-5 text-white text-center">SOLICITAÇÃO DE RESERVAS</h2>
                 </div>
-                <br>
-                <div class="form-group col-md-12">
-                    <h5 class="text-dark text-left">Dados do Acompanhante<hr></h5>
-                </div>   
-                <div class="form-row">
-                    <div class="form-group col-md-3">
-                        <label>Nome</label>
-                        <input type="text" class="form-control" id="nameID" aria-describedby="emailHelp" placeholder="">
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label>Data de Nascimento</label>
-                        <input type="date" class="form-control" id="cpfID" aria-describedby="emailHelp" placeholder="">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label>CPF</label>
-                        <input type="text" class="form-control" id="cpfID" aria-describedby="emailHelp" placeholder="">
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label>RG</label>
-                        <input type="text" class="form-control" id="cpfID" aria-describedby="emailHelp" placeholder="">
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label>Sexo</label>
-                        <select class="form-control" id="selectQuarto">
-                            <option disabled='disabled' selected>Selecione</option>
-                            <option>Masculino</option>
-                            <option>Feminino</option>
-                            <option>Não informar</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label>E-mail</label>
-                        <input type="number" class="form-control" id="cpfID" aria-describedby="emailHelp" placeholder="">
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label>Telefone</label>
-                        <input type="number" class="form-control" id="cpfID" aria-describedby="emailHelp" placeholder="">
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label>Grau Parentesco</label>
-                        <select class="form-control" id="selectQuarto">
-                            <option disabled='disabled' selected>Selecione</option>
-                            <option>Pai</option>
-                            <option>Mãe</option>
-                            <option>Outro</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label>Informações complementares</label>
-                        <input type="text" class="form-control" id="nameID" aria-describedby="emailHelp" placeholder="">
-                    </div>
-                </div>
-                <div class="form-group col-md-12">
-                    <br>
-                    <h5 class="text-dark text-left">Escolha um quarto<hr></h5>
-                </div>   
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <label>Tipo de Quarto?</label>
-                        <select class="form-control" id="selectQuarto">
-                            <option disabled='disabled' selected>Selecione</option>
-                            <option>Quarto comum</option>
-                            <option>Quarto infantil</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label>Data de Entrada</label>
-                        <input type="date" class="form-control" id="nameID" aria-describedby="emailHelp" placeholder="">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label>Data de Saída</label>
-                        <input type="date" class="form-control" id="nameID" aria-describedby="emailHelp" placeholder="">
-                    </div>
-                </div>
-                <div class="form-group col-md-12" id="btn-reservar">
-                    <br>
-                    <a href="/" class="btn btn-danger">CANCELAR</a>
-                    <button type="submit" class="btn btn-success">RESERVAR</button>
-                    <br>
-                </div>
-            </form>   
-        </div>          
-    </section>
-</body>
+                <div class="container py-4 shadow-lg p-3 mb-5 bg-white">
+                    <form method="POST" action="/salvarReservas">
+                        <div class="form-group col-md-12">
+                            <h5 class="text-dark text-left">Dados do Paciente <hr></h5>
+                        </div>   
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label>Nome</label>
+                                <input type="text" class="form-control" id="nameID" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label>Data de Nascimento</label>
+                                <input type="date" class="form-control" id="cpfID" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label>CPF</label>
+                                <input type="text" class="form-control" id="cpfID" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label>RG</label>
+                                <input type="text" class="form-control" id="cpfID" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label>Sexo</label>
+                                <select class="form-control" id="selectQuarto">
+                                    <option disabled='disabled' selected>Selecione</option>
+                                    <option>Masculino</option>
+                                    <option>Feminino</option>
+                                    <option>Não informar</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label>Endereço</label>
+                                <input type="text" class="form-control" id="nameID" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label>E-mail</label>
+                                <input type="number" class="form-control" id="cpfID" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label>Telefone</label>
+                                <input type="number" class="form-control" id="cpfID" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label>Laudo Médico</label>
+                                <input type="file" class="form-control-sm form-control-file" id="exampleFormControlFile1">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group col-md-12">
+                            <h5 class="text-dark text-left">Dados do Acompanhante<hr></h5>
+                        </div>   
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label>Nome</label>
+                                <input type="text" class="form-control" id="nameID" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label>Data de Nascimento</label>
+                                <input type="date" class="form-control" id="cpfID" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label>CPF</label>
+                                <input type="text" class="form-control" id="cpfID" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label>RG</label>
+                                <input type="text" class="form-control" id="cpfID" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label>Sexo</label>
+                                <select class="form-control" id="selectQuarto">
+                                    <option disabled='disabled' selected>Selecione</option>
+                                    <option>Masculino</option>
+                                    <option>Feminino</option>
+                                    <option>Não informar</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label>E-mail</label>
+                                <input type="number" class="form-control" id="cpfID" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label>Telefone</label>
+                                <input type="number" class="form-control" id="cpfID" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label>Grau Parentesco</label>
+                                <select class="form-control" id="selectQuarto">
+                                    <option disabled='disabled' selected>Selecione</option>
+                                    <option>Pai</option>
+                                    <option>Mãe</option>
+                                    <option>Outro</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label>Informações complementares</label>
+                                <input type="text" class="form-control" id="nameID" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <br>
+                            <h5 class="text-dark text-left">Escolha um quarto<hr></h5>
+                        </div>   
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label>Tipo de Quarto?</label>
+                                <select class="form-control" id="selectQuarto">
+                                    <option disabled='disabled' selected>Selecione</option>
+                                    <option>Quarto comum</option>
+                                    <option>Quarto infantil</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label>Data de Entrada</label>
+                                <input type="date" class="form-control" id="nameID" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label>Data de Saída</label>
+                                <input type="date" class="form-control" id="nameID" aria-describedby="emailHelp" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12" id="btn-reservar">
+                            <br>
+                            <a href="/" class="btn btn-danger">CANCELAR</a>
+                            <button type="submit" class="btn btn-success">RESERVAR</button>
+                            <br>
+                        </div>
+                    </form>   
+                </div>          
+            </section>
+    </body>
 <%- include('./partials/footer.ejs'); %> 

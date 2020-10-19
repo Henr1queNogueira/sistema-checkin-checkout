@@ -7,12 +7,11 @@
     <h1>Casa de Apoio<br>Hospital de amor da amazônia</h1>
     <h5>Porto Velho - Rondônia - Brasil</h5>
     <br>
-    <a class="btn btn-outline-info" href="/admin">Painel Admin PROVISÓRIO</a>
+    <a class="btn btn-lg btn-info rounded-0" href="/admin">Faça sua reserva aqui</a>
   </main>
-  
   <!--Verificar reservas-->
-  <div class="container py-4 bg-light shadow">
-    <form class="form-row align-items-center">
+  <div class="container bg-light shadow py-4">
+    <form class="row justify-content-center">
       <div class="form-group col-md-3">
         <label>Data de entrada</label>
         <input type="date" class="form-control" id="dtEntrada">
@@ -29,26 +28,48 @@
           <option value="">Infantil</option>
         </select>
       </div>
-      <div class="col-md-3">
+      <div class="form-group col-md-3">
         <br>
-        <button id='btnDisponibilidade' type="button" class="btn btn-danger mb-2">Verificar Disponibilidade</button>
+        <button id='btnDisponibilidade' type="button" class="btn btn-danger mt-2">Verificar Disponibilidade</button>
       </div>
     </form> 
   </div>
   <br>
-<div class="container py-4 bg-light">
+<div class="container pt-5 bg-light">
   <div class="row">
-      <div class="col-md-4">
-          <img id="logo" class="img-responsive img-circle center-block" alt="Casa de apoio" width="300" height="300" src="/img/logos/logo-azul-claro.png" alt="logo da casa de apoio">
-      </div>
+    <div class="col-md-4">
+      <img id="logo" class="img-responsive img-circle center-block" alt="Casa de apoio" width="400" height="400" src="/img/logos/logo-azul-claro.png" alt="logo da casa de apoio">
+    </div>
       <div class="col-md-8">
           <h2 class="section-header">Conheça nosso projeto</h2>
           <hr>
-          <br>
-          <p>A Casa de Apoio Filhos de Hiram é uma entidade sem fins lucrativos, que por meio de doações e recursos, será construída ao lado do Hospital de Câncer da Amazônia, e oferecerá hospedagem aos pacientes de outros municípios ou estados, que virão em tratamento para esta unidade de saúde. E disponibilizará um ambiente de repouso com muito conforto e de forma gratuita àqueles que lutam contra o Câncer.</p>    
-      </div>                  
+          <p>A Casa de Apoio Filhos de Hiram é uma entidade sem fins lucrativos, que por meio de doações e recursos, será construída ao lado
+            do Hospital de Câncer da Amazônia, e oferecerá hospedagem aos pacientes de outros municípios ou estados,
+            que virão em tratamento para esta unidade de saúde. E disponibilizará um ambiente de repouso com muito
+            conforto e de forma gratuita àqueles que lutam contra o Câncer.</p>
+            <a class="btn btn-primary" href="/quemSomos">Saiba mais</a>            
+      </div>               
     </div>
-  </div>
-  <%- include('./partials/perguntas.ejs'); %>
+    <div class="row p-5">
+      <div class="col-md-5">
+        <h4>A casa de Apoio</h4>
+        <hr>
+        <p>
+          A Casa de Apoio Filhos de Hiram visa atender pacientes em tratamento no Hospital de Amor Amazônia em Porto Velho.
+          Uma iniciativa da Grande Loja Maçônica do Estado de Rondônia (GLOMARON). 
+        </p>
+      </div>
+      <div class="col-md-7">
+        <video width="400" controls>
+          <source src="/img/casa-apresentacao.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <%- include('./partials/perguntas.ejs'); %>
+      </div>
+    </div>
+  </div> 
 </body>
 <%- include('./partials/footer.ejs'); %>

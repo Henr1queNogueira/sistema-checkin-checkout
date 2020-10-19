@@ -6,6 +6,12 @@ const ejs = require('ejs');
 const { msg } = require('body-parser');
 const flash = require('express-flash');
 
+router.get("/admin/usuarios", (req, res)=> {
+    Usuario.findAll().then(usuarios => {
+        res.render('admin/usuarios/usuarios', {usuarios:usuarios});
+
+    });  
+});
 
 /*página para adicionar usuários*/
 router.get('/admin/usuarios/new', (req, res) => {
@@ -74,7 +80,7 @@ router.post('/usuarios/salvar', (req, res) => {
         });
 });
 
-/*página para listar usuários do sistema */
+/*página para listar usuários do sistema 
 router.get('/admin/usuarios', (req, res) => {
     //se o user não tiver logado, será redirecionado p/ home page
     if(req.session.usuario == undefined){
@@ -148,11 +154,12 @@ router.post('/admin/usuarios/atualizar', (req, res) => {
     
 });  
 
-/*Formulário de login */
+/*Formulário de login 
 router.get('/',(req, res) => {
     res.render('index');
 
-});
+});*/
+/*
 router.post('/autenticacao', (req, res) => {
     var email = req.body.email;
     var senha = req.body.senha;
@@ -177,13 +184,13 @@ router.post('/autenticacao', (req, res) => {
         }
     });
 
-});
+}); */
 
-/*logout */
+/*logout 
 router.get('/logout', (req, res) => {
     req.session.usuario = undefined;
     res.redirect('/');
 
-})
+})*/
 
 module.exports = router;

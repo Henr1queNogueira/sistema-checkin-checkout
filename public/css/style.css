@@ -30,10 +30,9 @@ p {
 }
 
 
-/* Intro */
-
+/* Intro - início*/
 .intro {
-	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('../img/principal.png') no-repeat center center;
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1)),url('../img/img4.png') no-repeat center center;
 	background-size: cover;
 	line-height: 1.5;
 	padding: 120px 0;
@@ -68,6 +67,25 @@ p {
 		padding: 60px 0;
 	}
 }
+/* Intro - Final*/
+
+
+/*Inicio Navbar*/
+.myNav{
+	font-family: 'Montserrat', sans-serif;
+}
+.myNav #liPersonalizada:hover {background-color: #84a98c; }
+
+.star_block{
+	display:inline-block;
+    text-align:left;
+}
+video{
+	width: 100%;
+	height: auto;
+	
+}
+/*Fim Navbar*/
 
 .img-quartos{
 	width: 400px;
@@ -88,5 +106,10 @@ p {
 }
 #div-reservas{
 	background-color: #138496;
+}
+#btn-saibaMais{
+	position: absolute;
+    left:90%;
+    transform: translate(-50%, -50%);
 }
 
