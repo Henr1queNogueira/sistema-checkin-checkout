@@ -92,26 +92,6 @@ router.get('/admin/usuarios', (req, res) => {
     });  
 });
 
-/*Rota para deletar usuários */
-router.post('/usuarios/delete', (req, res) => {
-    var id = req.body.id;
-
-    //verficando se o id é válido, diferente de nulo
-     //verficar se o valor é número ou não. 
-    if(id != undefined || !isNaN(id)){
-        Usuario.destroy({
-            where: {
-                id:id
-            }
-        }).then(() =>{
-            res.redirect('/admin/usuarios');
-        })
-
-    }else{
-        res.redirect('/admin/usuarios');
-    }
-});
-
 /*Rota de editar */
 router.get('/admin/usuarios/editar/:id', (req, res) => {
     var id = req.params.id;
@@ -134,7 +114,6 @@ router.get('/admin/usuarios/editar/:id', (req, res) => {
 });
 
 /* Rota para salvar a edição*/
-
 router.post('/admin/usuarios/atualizar', (req, res) => {
     var id = req.body.id;
     var nome = req.body.nomeUsuario;
@@ -153,6 +132,26 @@ router.post('/admin/usuarios/atualizar', (req, res) => {
     });
     
 });  
+
+/*Rota para deletar usuários */
+router.post('/usuarios/delete', (req, res) => {
+    var id = req.body.id;
+
+    //verficando se o id é válido, diferente de nulo
+     //verficar se o valor é número ou não. 
+    if(id != undefined || !isNaN(id)){
+        Usuario.destroy({
+            where: {
+                id:id
+            }
+        }).then(() =>{
+            res.redirect('/admin/usuarios');
+        })
+
+    }else{
+        res.redirect('/admin/usuarios');
+    }
+});
 
 /*Formulário de login 
 router.get('/',(req, res) => {

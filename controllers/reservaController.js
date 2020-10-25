@@ -1,14 +1,16 @@
 const express = require('express');
 const router = express.Router();
 
+/*Tela pública - reservas */
 router.get("/reservas", (req, res)=> {
     res.render('reserva');
 });
 
-//Rota para receber os dados do formulário
-router.post('/salvarReservas', (req, res)=> {
 
-    res.send('Solicitação enviada!');
-});
+/*Tela Admin- Reservas */
+router.get("/admin/reservas", (req, res)=> {
+    res.render('admin/reservas/reservas')
+})
+
 
 module.exports = router;
