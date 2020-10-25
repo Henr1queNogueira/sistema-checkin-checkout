@@ -35,7 +35,7 @@
                                                 <a href="/admin/usuarios/editar/<%= usuarios.id %>" class="btn btn-warning">Editar</a>
                                                 <form method="POST" action="/usuarios/delete" style="display: inline;" onsubmit="confirmDelete(event, this)">
                                                     <input type="hidden" name="id" value="<%= usuarios.id %>">
-                                                    <button class="btn btn-danger" data-toggle="modal" data-target="#delete">Excluir</button>
+                                                    <button class="btn btn-danger">Excluir</button>
                                                 </form>      
                                             </td>
                                         </tr>
@@ -45,10 +45,9 @@
                       </div>      
                     </div>
                 </div>        
-             </selection>
-            
+             </selection>      
           </div>
         </div>
     </div>
   </body>
-  
+<%- include('../../partials/footerAdmin.ejs'); %>
